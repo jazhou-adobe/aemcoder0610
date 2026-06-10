@@ -1,0 +1,142 @@
+.student-stories {
+  --ss-heading-color: #232d4b;
+  --ss-text-color: #333;
+  --ss-tab-active-bg: #ffd300;
+  --ss-tab-inactive-bg: #f2f2f2;
+  --ss-tab-radius: 24px;
+  --ss-tab-padding: 8px 16px;
+  --ss-quote-font-size: 22px;
+  --ss-quote-line-height: 1.4;
+
+  text-align: center;
+  padding: 60px 0 40px;
+}
+
+.student-stories h2 {
+  color: var(--ss-heading-color);
+  font-size: var(--heading-font-size-xl, 36px);
+  margin-bottom: 16px;
+}
+
+.student-stories > div:first-child p {
+  color: var(--ss-text-color);
+  font-size: var(--body-font-size-s, 16px);
+  max-width: 700px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+/* Tab navigation */
+.student-stories .ss-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.student-stories .ss-tab {
+  background: var(--ss-tab-inactive-bg);
+  color: var(--ss-text-color);
+  border: none;
+  border-radius: var(--ss-tab-radius);
+  padding: var(--ss-tab-padding);
+  font-family: var(--body-font-family, sans-serif);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.student-stories .ss-tab.active {
+  background: var(--ss-tab-active-bg);
+}
+
+/* Student panel */
+.student-stories .ss-panel {
+  display: none;
+  text-align: left;
+}
+
+.student-stories .ss-panel.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  .student-stories .ss-panel.active {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+/* Video thumbnail */
+.student-stories .ss-thumbnail {
+  position: relative;
+  flex: 0 0 350px;
+  width: 350px;
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.student-stories .ss-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 9/16;
+}
+
+.student-stories .ss-thumbnail::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+/* Quote content */
+.student-stories .ss-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.student-stories .ss-content h3 {
+  color: var(--ss-heading-color);
+  font-size: var(--ss-quote-font-size);
+  font-weight: 500;
+  line-height: var(--ss-quote-line-height);
+  margin: 0 0 32px;
+  font-family: var(--body-font-family, sans-serif);
+  font-style: normal;
+}
+
+.student-stories .ss-content .ss-name {
+  color: var(--ss-heading-color);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+.student-stories .ss-content .ss-degree {
+  color: var(--ss-text-color);
+  font-size: 16px;
+  margin: 0;
+}

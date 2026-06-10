@@ -1,0 +1,126 @@
+.study-cta-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.study-cta {
+  --block-bg: url('/drafts/images/bg-waves-yellow.svg');
+  --block-text: #232D4B;
+  --card-bg: #ffffff;
+  --card-radius: 16px;
+  --card-padding: 32px 32px 24px;
+  --cta-bg: #FFD300;
+  --cta-color: #000000;
+  --cta-radius: 30px;
+
+  background-image: var(--block-bg);
+  background-size: cover;
+  background-position: right center;
+  background-color: #FFD300;
+  color: var(--block-text);
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.study-cta > div:first-child {
+  margin-bottom: 60px;
+}
+
+.study-cta > div:first-child p {
+  font-size: 18px;
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+
+.study-cta > div:first-child h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--block-text);
+  margin: 0;
+}
+
+.study-cta > div:not(:first-child) {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  text-align: left;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  flex-direction: column;
+}
+
+.study-cta > div:not(:first-child) > div:first-child {
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+.study-cta > div:not(:first-child) > div:first-child img {
+  width: 32px;
+  height: 32px;
+}
+
+.study-cta > div:not(:first-child) > div:last-child {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.study-cta > div:not(:first-child) h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--block-text);
+  margin: 0 0 8px;
+}
+
+.study-cta > div:not(:first-child) p {
+  font-size: 16px;
+  color: var(--block-text);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+main .study-cta .button-wrapper {
+  display: block;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+main .study-cta a.button:any-link {
+  background: var(--cta-bg);
+  color: var(--cta-color);
+  border: none;
+  border-radius: var(--cta-radius);
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+main .study-cta a.button:any-link:hover {
+  background: #e6be00;
+}
+
+@media (width >= 900px) {
+  .study-cta {
+    padding: 150px 32px 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+    max-width: none;
+  }
+
+  .study-cta > div:first-child {
+    grid-column: 1 / -1;
+    margin-bottom: 40px;
+  }
+
+  .study-cta > div:not(:first-child) {
+    margin-bottom: 0;
+    min-height: 240px;
+  }
+}

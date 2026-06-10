@@ -1,0 +1,161 @@
+/* Section-level: center heading/description and make full-width */
+.research-cards-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Center heading/description content surrounding the block */
+.default-content-wrapper:has(+ .research-cards-wrapper),
+.research-cards-wrapper + .default-content-wrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.default-content-wrapper:has(+ .research-cards-wrapper) h2 {
+  color: #232d4b;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.default-content-wrapper:has(+ .research-cards-wrapper) p {
+  color: #232d4b;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.research-cards-wrapper + .default-content-wrapper {
+  margin-top: 24px;
+}
+
+.research-cards {
+  --card-radius: 16px;
+  --card-height: 466px;
+  --cta-bg: var(--accent-color, #ffd300);
+  --cta-radius: 30px;
+  --title-color: #ffd300;
+  --desc-color: #ffffff;
+
+  padding: 0 32px;
+}
+
+/* Cards row - horizontal scrolling container */
+
+/* Cards row - horizontal scrolling container */
+.research-cards .cards-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 16px;
+}
+
+/* Individual card */
+.research-cards .card {
+  position: relative;
+  flex: 0 0 340px;
+  height: var(--card-height);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark overlay for text readability */
+.research-cards .card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.65) 100%);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: var(--card-radius);
+}
+
+/* Icon cell */
+.research-cards .card-icon {
+  position: relative;
+  z-index: 2;
+  padding: 32px 32px 0;
+}
+
+.research-cards .card-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Content cell */
+.research-cards .card-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.research-cards .card-content h3 {
+  color: var(--title-color);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.research-cards .card-content p {
+  color: var(--desc-color);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+/* CTA button */
+main .research-cards a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cta-bg);
+  color: #000;
+  border: none;
+  border-radius: var(--cta-radius);
+  padding: 12px 28px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main .research-cards a.button:any-link:hover {
+  background: #e6be00;
+}
+
+main .research-cards .button-wrapper {
+  display: block;
+  margin-top: 8px;
+}
+
+@media (width >= 900px) {
+  .research-cards .cards-row {
+    overflow-x: visible;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .research-cards .card {
+    flex: 1 1 0;
+    max-width: 355px;
+  }
+}
+
+@media (width < 600px) {
+  .research-cards .card {
+    flex: 0 0 280px;
+    height: 400px;
+  }
+}

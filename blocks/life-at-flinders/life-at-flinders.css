@@ -1,0 +1,156 @@
+.life-at-flinders-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.life-at-flinders {
+  --block-heading-color: #232d4b;
+  --block-card-title-color: #ffd300;
+  --block-card-text-color: #ffffff;
+  --block-cta-bg: #ffd300;
+  --block-cta-color: #000000;
+  --block-card-radius: 16px;
+  --block-card-width: 355px;
+  --block-card-height: 466px;
+  --block-gap: 20px;
+
+  padding: 80px 0 40px;
+}
+
+/* Heading row */
+.life-at-flinders > div:first-child {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 0 24px;
+}
+
+.life-at-flinders > div:first-child h2 {
+  color: var(--block-heading-color);
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  font-family: var(--body-font-family);
+}
+
+.life-at-flinders > div:first-child p {
+  color: var(--block-heading-color);
+  font-size: 16px;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Cards container - horizontal scroll */
+.life-at-flinders .cards-container {
+  display: flex;
+  gap: var(--block-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 32px 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.life-at-flinders .cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card */
+.life-at-flinders .card {
+  position: relative;
+  min-width: var(--block-card-width);
+  height: var(--block-card-height);
+  border-radius: var(--block-card-radius);
+  overflow: hidden;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Card background image */
+.life-at-flinders .card-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.life-at-flinders .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card content overlay */
+.life-at-flinders .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+  z-index: 1;
+}
+
+/* Card icon */
+.life-at-flinders .card-icon {
+  margin-bottom: 8px;
+}
+
+.life-at-flinders .card-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Card title */
+.life-at-flinders .card-content h3 {
+  color: var(--block-card-title-color);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+/* Card description */
+.life-at-flinders .card-content p {
+  color: var(--block-card-text-color);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+/* CTA button */
+main .life-at-flinders .card-content .button-wrapper {
+  display: block;
+}
+
+main .life-at-flinders .card-content a.button:any-link {
+  display: inline-block;
+  background: var(--block-cta-bg);
+  color: var(--block-cta-color);
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+}
+
+main .life-at-flinders .card-content a.button:any-link:hover {
+  background: #e6be00;
+}
+
+/* Navigation dots placeholder */
+.life-at-flinders .nav-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+@media (width >= 900px) {
+  .life-at-flinders > div:first-child h2 {
+    font-size: 32px;
+  }
+
+  .life-at-flinders .cards-container {
+    padding: 0 calc((100% - 1110px) / 2) 16px;
+  }
+}

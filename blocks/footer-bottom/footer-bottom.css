@@ -1,0 +1,62 @@
+.footer-bottom-wrapper {
+  background: #232d4b;
+  padding: 32px 0;
+  max-width: 100% !important;
+}
+
+.footer-bottom {
+  --fb-text: #ffffff;
+  color: var(--fb-text);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-bottom > div:first-child {
+  margin-bottom: 24px;
+}
+
+.footer-bottom > div:first-child > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer-bottom > div:first-child > div a {
+  display: inline-block;
+}
+
+.footer-bottom > div:first-child > div a picture,
+.footer-bottom > div:first-child > div a img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.footer-bottom > div:first-child > div a picture img {
+  height: 40px;
+  width: auto;
+}
+
+.footer-bottom > div:last-child p {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--fb-text);
+}
+
+.footer-bottom > div:last-child p a {
+  color: var(--fb-text);
+  text-decoration: none;
+}
+
+.footer-bottom > div:last-child p a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .footer-bottom {
+    padding: 0 32px;
+  }
+}

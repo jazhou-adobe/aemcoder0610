@@ -1,0 +1,90 @@
+.career-match-wrapper {
+  max-width: 1200px !important;
+  margin: auto;
+  padding: 0 24px !important;
+}
+
+.career-match {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.career-match .career-match-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.career-match .career-match-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.career-match .career-match-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 500px;
+  padding: 40px 60px;
+}
+
+.career-match .career-match-icon img {
+  height: 40px;
+  width: auto;
+}
+
+.career-match h2 {
+  color: #fff;
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.career-match .career-match-content p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+main .career-match a.button:any-link,
+.career-match .career-match-content a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+main .career-match a.button:any-link:hover,
+.career-match .career-match-content a:hover {
+  color: var(--accent-color, #ffd300);
+}
+
+@media (width < 900px) {
+  .career-match {
+    height: 400px;
+    border-radius: 12px;
+  }
+
+  .career-match .career-match-content {
+    padding: 24px 24px;
+    max-width: 100%;
+  }
+
+  .career-match h2 {
+    font-size: 24px;
+  }
+}
